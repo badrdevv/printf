@@ -66,6 +66,55 @@ int print_string(va_list s)
 }
 
 /**
+ *print_decimal - it prints a decimal number.
+ *@de: a list of stored decimal numbers to be printed.
+ *Return:number of char printed.
+ */
+int print_decimal(va_list de)
+{
+	unsigned int count = 0;
+	int num, num1;
+	int units, digit = 0, j, dec;
+	int len = 0;
+	int num, num1, i;
+	int units, digit = 0, j, dec;
+	char intmin[11] = {"-2147483648"};
+
+	num = va_arg(de, int);
+	if (num == INT_MIN)
+	{
+		for (i = 0; i <= 10; i++)
+		{
+			_putchar(intmin[i]);
+			len++;
+		}
+		return (len);
+	}
+	if (num < 0)
+	{
+		_putchar('-');
+		num = -num;
+		len++;
+	}
+	num1 = num;
+	dec = 1;
+	for (units = 1; num1 > 9; units++)
+	{
+		num1 /= 10;
+		dec *= 10;
+	}
+	for (j = 1; j <= units; j++)
+	{
+		digit = num / dec;
+		num %= dec;
+		dec /= 10;
+		_putchar(digit + '0');
+		len++;
+	}
+	return (len);
+}
+
+/**
  * _putchar - writes the character c to stdout.
  * @c: The character to print.
  *
