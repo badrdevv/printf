@@ -64,7 +64,6 @@ int print_string(va_list s)
 		_putchar(str[len]);
 	return (len);
 }
-
 /**
  *print_decimal - it prints a decimal number.
  *@de: a list of stored decimal numbers to be printed.
@@ -72,15 +71,13 @@ int print_string(va_list s)
  */
 int print_decimal(va_list de)
 {
-	unsigned int count = 0;
-	int num, num1;
-	int units, digit = 0, j, dec;
 	int len = 0;
 	int num, num1, i;
 	int units, digit = 0, j, dec;
 	char intmin[11] = {"-2147483648"};
 
 	num = va_arg(de, int);
+
 	if (num == INT_MIN)
 	{
 		for (i = 0; i <= 10; i++)
@@ -125,3 +122,4 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+

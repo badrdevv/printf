@@ -23,6 +23,7 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int print_char(va_list c);
 int print_string(va_list s);
-int print_decimal(va_list de);
+int print_decimal(va_list di);
+
 
 #endif
