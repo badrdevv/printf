@@ -1,1 +1,2 @@
-A README.md file for our team project 0x11. C - printf
+A README.md file for our team project 0x11. C - printf, it is a group project that has about 16 tasks, those tasks give us some informations to implement the printf function, and try to handle different conversion specifiers like %d (decimal), %s (string), etc....
+you'll find also some functions that handle custom conversion specifiers made by us, example: %b which is the binary format specifier that convert an unsigned int argument to binary, we will handle the flag characers for non-custom conversion specifiers like: +, space, #, additionally, there are more functions that handle length modifiers, field width, precision for non-custom conversion specifiers
